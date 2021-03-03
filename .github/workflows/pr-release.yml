@@ -1,0 +1,14 @@
+name: release-bot
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: reimagined/github-actions/publish@feature/release-action
+        with:
+          event: ${{ github.event }}

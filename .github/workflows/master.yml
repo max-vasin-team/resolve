@@ -2,9 +2,9 @@ name: Master CI/CD
 
 on:
   push:
-    branches: [ master ]
+    branches: [ not-exist ]
   pull_request:
-    branches: [ master ]
+    branches: [ not-exist ]
 
 jobs:
   smoke-test:
