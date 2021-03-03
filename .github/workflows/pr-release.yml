@@ -26,4 +26,4 @@ jobs:
     steps:
       - uses: reimagined/github-actions/release-pr-bot@feature/release-action
         with:
-          event: ${{ github.event }}
+          event: ${{ toJSON(github.event) }}
