@@ -24,6 +24,6 @@ jobs:
   process:
     runs-on: ubuntu-latest
     steps:
-      - uses: reimagined/github-actions/release-pr-bot@feature/release-action
+      - uses: reimagined/github-actions/release-pr-bot@release-actions
         with:
           event: ${{ toJSON(github.event) }}
