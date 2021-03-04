@@ -12,21 +12,20 @@ jobs:
         with:
           node-version: '12'
 
+      - uses: reimagined/github-actions/publish@v1
+        with:
+          registry: github
+          token: ${{ secrets.PUBLISH_ACCESS_TOKEN }}
+          version: ${{ env.git-release-version }}
+          tag: test
+          unpublish: true
+          github_target_repository: resolve-js/resolve
+
       - uses: reimagined/github-actions/git-release@feature/release-action
-        id: git-release
         with:
           push_event: ${{ toJSON(github.event) }}
           commit: ${{ github.sha }}
           token: ${{ secrets.RESOLVE_BOT_PAT }}
           ssh_private_key: ${{ secrets.RESOLVE_BOT_SSH_PRIVATE_KEY }}
 
-#      - uses: reimagined/github-actions/publish@v1
-#        with:
-#          registry: github
-#          token: ${{ secrets.PUBLISH_ACCESS_TOKEN }}
-#          version: ${{ steps.git-release.outputs.version }}
-#          tag: latest
-#          unpublish: false
-#          github_target_repository: resolve-js/resolve
-#
-#
+
