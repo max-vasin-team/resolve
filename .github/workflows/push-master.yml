@@ -20,7 +20,7 @@ jobs:
         with:
           registry: github
           token: ${{ secrets.RESOLVE_BOT_PAT }}
-          version: ${{ env.git_release_version }}
+          version: source
           tag: test
           unpublish: true
           github_target_repository: resolve-js/resolve
