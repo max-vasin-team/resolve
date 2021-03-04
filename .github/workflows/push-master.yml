@@ -35,4 +35,3 @@ jobs:
           release_branch: feature/release-workflow
           development_branch: feature/release-workflow-dev
 
-
