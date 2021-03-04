@@ -12,6 +12,10 @@ jobs:
         with:
           node-version: '12'
 
+      - name: Build packages
+        run: |
+          - yarn install --frozen-lockfile
+
       - uses: reimagined/github-actions/publish@v1
         with:
           registry: github
