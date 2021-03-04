@@ -28,4 +28,5 @@ jobs:
         with:
           event: ${{ toJSON(github.event) }}
           token: ${{ secrets.RESOLVE_BOT_PAT }}
+          bot_name: 'resolve_bot'
           required_reviews: '2'
