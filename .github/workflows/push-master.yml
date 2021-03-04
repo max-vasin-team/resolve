@@ -15,8 +15,8 @@ jobs:
       - uses: reimagined/github-actions/git-release@v1
         id: git-release
         with:
-          push_event: ${{ toJSON(git.event} }}
-          commit: ${{ git.sha }}
+          push_event: ${{ toJSON(github.event} }}
+          commit: ${{ github.sha }}
           token: ${{ secrets.RESOLVE_BOT_PAT }}
 
 #      - uses: reimagined/github-actions/publish@v1
