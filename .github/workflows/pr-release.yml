@@ -18,7 +18,7 @@ on:
       - review_requested
       - review_request_removed
     branches:
-      - master
+      - master*
 
 jobs:
   process:
