@@ -16,7 +16,7 @@ jobs:
         run: |
           yarn install --frozen-lockfile
 
-      - uses: reimagined/github-actions/publish@v1
+      - uses: reimagined/github-actions/publish@feature/release-action
         with:
           registry: github
           token: ${{ secrets.RESOLVE_BOT_PAT }}
