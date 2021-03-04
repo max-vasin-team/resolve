@@ -1,6 +1,6 @@
 {
   "name": "@resolve-js/module-admin",
-  "version": "0.77.7",
+  "version": "0.77.8",
   "description": "A reSolve module that adds admin commands to an application.",
   "keywords": [
     "cqrs",
