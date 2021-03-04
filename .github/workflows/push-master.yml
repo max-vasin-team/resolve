@@ -15,7 +15,7 @@ jobs:
       - uses: reimagined/github-actions/publish@v1
         with:
           registry: github
-          token: ${{ secrets.PUBLISH_ACCESS_TOKEN }}
+          token: ${{ secrets.RESOLVE_BOT_PAT }}
           version: ${{ env.git-release-version }}
           tag: test
           unpublish: true
