@@ -6,6 +6,7 @@ on:
 
 jobs:
   release:
+    if: github.event.pusher.name != 'resolve-bot'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v2-beta
