@@ -2,10 +2,12 @@ name: master (push)
 
 on:
   push:
-    branches: [ feature/release-workflow ]
+    branches:
+      - master*
 
 jobs:
   release:
+    if: github.event.head_commit.message != '<auto> merge version branch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v2-beta
@@ -16,11 +18,11 @@ jobs:
         run: |
           yarn install --frozen-lockfile
 
-      - uses: reimagined/github-actions/publish@v1
+      - uses: reimagined/github-actions/publish@feature/release-action
         with:
           registry: github
           token: ${{ secrets.RESOLVE_BOT_PAT }}
-          version: ${{ env.git_release_version }}
+          version: source
           tag: test
           unpublish: true
           github_target_repository: resolve-js/resolve
@@ -31,5 +33,6 @@ jobs:
           commit: ${{ github.sha }}
           token: ${{ secrets.RESOLVE_BOT_PAT }}
           ssh_private_key: ${{ secrets.RESOLVE_BOT_SSH_PRIVATE_KEY }}
-
+          release_branch: master-2
+          development_branch: feature/release-workflow
 

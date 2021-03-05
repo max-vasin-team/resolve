@@ -1,6 +1,6 @@
 {
   "name": "@resolve-js/local-event-broker",
-  "version": "0.26.5",
+  "version": "0.78.1",
   "description": "The reSolve framework's event broker for applications on a local machine.",
   "keywords": [
     "cqrs",
@@ -23,10 +23,10 @@
   },
   "dependencies": {
     "@babel/runtime": "7.9.6",
-    "@resolve-js/debug-levels": "0.26.5",
-    "@resolve-js/eventstore-base": "0.26.5",
-    "@resolve-js/local-rpc": "0.26.5",
-    "@resolve-js/readmodel-base": "0.26.5",
+    "@resolve-js/debug-levels": "0.78.1",
+    "@resolve-js/eventstore-base": "0.78.1",
+    "@resolve-js/local-rpc": "0.78.1",
+    "@resolve-js/readmodel-base": "0.78.1",
     "sqlite": "^3.0.2",
     "tmp": "^0.1.0"
   },
