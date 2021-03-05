@@ -36,7 +36,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 0.25.0
 
 ### Breaking Changes
-
 #### resolve-client
 
 - The **timestamp** query response field is now located in the meta object
