@@ -2,7 +2,8 @@ name: master (push)
 
 on:
   push:
-    branches: [ feature/release-workflow ]
+    branches:
+      - master*
 
 jobs:
   release:
