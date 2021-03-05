@@ -14,18 +14,18 @@ jobs:
         with:
           node-version: '12'
 
-      - name: Build packages
-        run: |
-          yarn install --frozen-lockfile
-
-      - uses: reimagined/github-actions/publish@feature/release-action
-        with:
-          registry: github
-          token: ${{ secrets.RESOLVE_BOT_PAT }}
-          version: source
-          tag: test
-          unpublish: true
-          github_target_repository: resolve-js/resolve
+#      - name: Build packages
+#        run: |
+#          yarn install --frozen-lockfile
+#
+#      - uses: reimagined/github-actions/publish@feature/release-action
+#        with:
+#          registry: github
+#          token: ${{ secrets.RESOLVE_BOT_PAT }}
+#          version: source
+#          tag: test
+#          unpublish: true
+#          github_target_repository: resolve-js/resolve
 
       - uses: reimagined/github-actions/git-release@feature/release-action
         with:
